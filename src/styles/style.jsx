@@ -65,3 +65,10 @@ export const ChoiceButton = styled.button`
   background-color: rgb(255, 255, 255);
   border-radius: 12px;
 `
+
+
+export const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
