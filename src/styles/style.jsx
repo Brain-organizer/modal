@@ -23,6 +23,7 @@ export const RowDirectionContainer = styled.div`
 
 export const StyledButton = styled.button`
   border-radius: 8px;
+  cursor: pointer;
 
   ${({$isNegative, $size}) => $isNegative? 
     (($size==='large'||$size==='Large') ? reverseNegativeStyle : normalNegativeStyle) 
