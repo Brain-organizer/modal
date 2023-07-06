@@ -1,7 +1,7 @@
 import { RowDirectionContainer, StyledButton } from "../styles/style"
 import TitledContainer from "./TitledContainer"
 
-function ModalContainer() {
+function ModalButtons() {
   return (
     <TitledContainer title='Modal'>
       <RowDirectionContainer>
@@ -12,4 +12,4 @@ function ModalContainer() {
   )
 }
 
-export default ModalContainer
+export default ModalButtons

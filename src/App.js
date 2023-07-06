@@ -1,18 +1,17 @@
-import './App.css';
-import ButtonContainer from './components/ButtonContainer';
-import FormContainer from './components/FormContainer';
-import ModalContainer from './components/ModalContainer';
-import SelectorContainer from './components/SelectorContainer';
+import Buttons from './components/Buttons';
+import Form from './components/Form';
+import ModalButtons from './components/ModalButtons';
+import Selectors from './components/Selectors';
 import GlobalStyle from './styles/GlobalStyle';
 
 function App() {
   return (
     <>
       <GlobalStyle/>
-      <ButtonContainer/>
-      <FormContainer/>
-      <ModalContainer/>
-      <SelectorContainer/>
+      <Buttons/>
+      <Form/>
+      <ModalButtons/>
+      <Selectors/>
     </>
   );
 }

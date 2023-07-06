@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RowDirectionContainer, StyledButton, StyledInput } from "../styles/style";
 import TitledContainer from "./TitledContainer";
 
-function FormContainer() {
+function Form() {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
 
@@ -46,4 +46,4 @@ function FormContainer() {
   )
 }
 
-export default FormContainer
+export default Form

@@ -2,7 +2,7 @@ import TitledContainer from './TitledContainer'
 import { RowDirectionContainer } from '../styles/style'
 import ImageInsertableButton from './ImageInsertableButton'
 
-function ButtonContainer() {
+function Buttons() {
   return (
     <TitledContainer title='Button'>
       <RowDirectionContainer>
@@ -23,4 +23,4 @@ function ButtonContainer() {
   )
 }
 
-export default ButtonContainer
+export default Buttons

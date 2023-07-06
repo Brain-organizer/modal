@@ -1,7 +1,7 @@
 import { ChoiceButton, RowDirectionContainer } from "../styles/style";
 import TitledContainer from "./TitledContainer";
 
-function SelectorContainer() {
+function Selectors() {
   return (
     <TitledContainer title='Select' $borderExist={true} $height='200px'>
       <RowDirectionContainer>
@@ -18,4 +18,4 @@ function SelectorContainer() {
   )
 }
 
-export default SelectorContainer
+export default Selectors
