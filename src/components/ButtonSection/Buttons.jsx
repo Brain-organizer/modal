@@ -1,5 +1,5 @@
-import TitledContainer from './TitledContainer'
-import { RowDirectionContainer } from '../styles/style'
+import TitledContainer from '../TemplateComponents/TitledContainer'
+import { RowDirectionContainer } from '../../styles/style'
 import ImageInsertableButton from './ImageInsertableButton'
 
 function Buttons() {

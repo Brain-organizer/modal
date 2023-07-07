@@ -1,5 +1,5 @@
-import { ChoiceButton, RowDirectionContainer } from "../styles/style";
-import TitledContainer from "./TitledContainer";
+import { ChoiceButton, RowDirectionContainer } from "../../styles/style";
+import TitledContainer from "../TemplateComponents/TitledContainer";
 
 function Selectors() {
   return (

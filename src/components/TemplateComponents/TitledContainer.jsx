@@ -1,4 +1,4 @@
-import { ContentsContainer, StyledTitledContainer, TitleHeading } from '../styles/style'
+import { ContentsContainer, StyledTitledContainer, TitleHeading } from '../../styles/style'
 
 const TitledContainer = ({title, children, $borderExist, $height, ...props}) => {
   title = title || 'TitledContainer에 Title props를 넘겨주지 않았습니다.';

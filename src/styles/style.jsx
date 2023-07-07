@@ -18,6 +18,12 @@ export const ContentsContainer = styled.div`
 export const RowDirectionContainer = styled.div`
   display:flex;
   gap: ${({$gap}) => $gap||'10px'};
+  
+  position: ${({$bottom,$right,$left,$top}) => $bottom||$right||$left||$top? 'absolute' : 'static'};
+  bottom: ${({$bottom}) => $bottom||'auto'};
+  right: ${({$right}) => $right||'auto'};
+  left: ${({$left}) => $left||'auto'};
+  top: ${({$top}) => $top||'auto'};
 `
 
 
@@ -71,4 +77,34 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+
+export const ViewportCover = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(221, 221, 221, 0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+export const Card = styled.div`
+  position: relative;
+  border-radius: 12px;
+  width: ${({$width}) => $width||'auto'};
+  height: ${({$height}) => $height||'auto'};
+  padding: 24px;
+  background-color: white;
+`
+
+export const CircleButton = styled.button`
+  border: 1px solid rgb(221, 221, 221);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
 `

@@ -1,4 +1,4 @@
-import { ImageContainer, StyledButton } from "../styles/style"
+import { ImageContainer, StyledButton } from "../../styles/style"
 
 function ImageInsertableButton({text, children, $size, $isNegative, ...props}) {
   return (
