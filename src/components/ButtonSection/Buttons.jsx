@@ -1,3 +1,4 @@
+import React from 'react'
 import TitledContainer from '../TemplateComponents/TitledContainer'
 import { RowDirectionContainer } from '../../styles/style'
 import ImageInsertableButton from './ImageInsertableButton'
@@ -23,4 +24,4 @@ function Buttons() {
   )
 }
 
-export default Buttons
+export default React.memo(Buttons)

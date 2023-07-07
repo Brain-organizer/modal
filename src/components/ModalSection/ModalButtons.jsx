@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react"
+import React, { useCallback, useState } from "react"
 import { RowDirectionContainer, StyledButton } from "../../styles/style"
 import TitledContainer from "../TemplateComponents/TitledContainer"
 import CardModal1 from "./CardModal1";
@@ -27,4 +27,4 @@ function ModalButtons() {
   )
 }
 
-export default ModalButtons
+export default React.memo(ModalButtons)

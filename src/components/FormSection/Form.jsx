@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { RowDirectionContainer, StyledButton, StyledInput } from "../../styles/style";
 import TitledContainer from "../TemplateComponents/TitledContainer";
 
@@ -46,4 +46,4 @@ function Form() {
   )
 }
 
-export default Form
+export default React.memo(Form)

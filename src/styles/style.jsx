@@ -1,11 +1,19 @@
 import { styled } from "styled-components";
 import { largeButtonStyle, mediumButtonStyle, normalNegativeStyle, normalPrimaryStyle, reverseNegativeStyle, reversePrimaryStyle, smallButtonStyle } from "./templateCss";
 
+export const PageLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+  gap: 20px;
+`
+
 export const StyledTitledContainer = styled.div`
   display:flex;
   flex-direction: column;
   border: 3px ${({$borderExist}) => $borderExist? 'solid' : 'none'} rgb(221, 221, 221);
   height: ${({$height}) => $height||'auto'};
+  overflow: ${({$overflow})=> $overflow || 'visible'};
 `
 export const TitleHeading = styled.h1`
   margin: 21px 0px;
@@ -19,7 +27,7 @@ export const RowDirectionContainer = styled.div`
   display:flex;
   gap: ${({$gap}) => $gap||'10px'};
   
-  position: ${({$bottom,$right,$left,$top}) => $bottom||$right||$left||$top? 'absolute' : 'static'};
+  position: ${({$position}) => $position||'static'};
   bottom: ${({$bottom}) => $bottom||'auto'};
   right: ${({$right}) => $right||'auto'};
   left: ${({$left}) => $left||'auto'};
@@ -71,6 +79,25 @@ export const ChoiceButton = styled.button`
   background-color: rgb(255, 255, 255);
   border-radius: 12px;
 `
+export const SelectContainer = styled.button`
+  background-color: white;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  width: 300px;
+  padding: 0px;
+  position: ${({$position}) => $position||'static'};
+  overflow: hidden;
+`
+export const SelectItemBox = styled.div`
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0px 12px ;
+
+  &&:hover{
+    background-color: rgb(221, 221, 221);
+  }
+`
 
 
 export const ImageContainer = styled.div`
@@ -100,7 +127,6 @@ export const Card = styled.div`
   padding: 24px;
   background-color: white;
 `
-
 export const CircleButton = styled.button`
   border: 1px solid rgb(221, 221, 221);
   width: 40px;
@@ -108,3 +134,5 @@ export const CircleButton = styled.button`
   border-radius: 100%;
   cursor: pointer;
 `
+
+
