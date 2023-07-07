@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChoiceButton, RelativeContainer } from "../../styles/style";
+import { ChoiceButton } from "../../styles/style";
 import SelectorModal from "./SelectorModal"
 import { useDispatch, useSelector } from "react-redux";
 import { openModal, closeModal } from "../../redux/modules/unCoverdModals";

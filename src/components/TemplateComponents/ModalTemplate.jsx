@@ -1,10 +1,8 @@
 import { useRef } from "react";
-import { RelativeContainer, ViewportCover } from "../../styles/style";
-import { useDispatch } from "react-redux";
+import { ViewportCover } from "../../styles/style";
 
-function ModalTemplate({children, coverExist, exitByOuterClick, closeModal, ...props}) {
+function ModalTemplate({children, coverExist, exitByOuterClick, closeModal}) {
   const coverRef = useRef();
-  const dispatch = useDispatch();
 
   if(coverExist){
     const coverOnClick = (exitByOuterClick?

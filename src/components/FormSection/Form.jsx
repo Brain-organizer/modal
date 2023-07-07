@@ -32,11 +32,11 @@ function Form() {
         <RowDirectionContainer $gap='30px'>
           <div>
             <label htmlFor='name'>이름 &nbsp;</label>
-            <StyledInput id='name' type='text' onChange={nameOnChangeHandler} value={name}/>
+            <StyledInput id='name' type='text' autoComplete="off" onChange={nameOnChangeHandler} value={name}/>
           </div>
           <div>
             <label htmlFor='price'>가격 &nbsp;</label>
-            <StyledInput id='price' type='text' onChange={priceOnChangeHandler} value={(+price).toLocaleString()}/>
+            <StyledInput id='price' type='text' autoComplete="off" onChange={priceOnChangeHandler} value={(+price).toLocaleString()}/>
           </div>
           <StyledButton onClick={onSubmitHandler}>저장</StyledButton>
         </RowDirectionContainer>
