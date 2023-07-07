@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useDispatch } from 'react-redux';
+import Buttons from './components/ButtonSection/Buttons';
+import Form from './components/FormSection/Form';
+import ModalButtons from './components/ModalSection/ModalButtons';
+import Selectors from './components/SelectorSection/Selectors';
+import { PageLayout } from './styles/style';
+import {closeAllModals} from './redux/modules/unCoverdModals'
 
 function App() {
+  const dispatch = useDispatch();
+  const pageOnClick= ()=>{
+    dispatch(closeAllModals());
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PageLayout onClick={pageOnClick}>
+      <Buttons/>
+      <Form/>
+      <ModalButtons/>
+      <Selectors/>
+    </PageLayout>
   );
 }
 
