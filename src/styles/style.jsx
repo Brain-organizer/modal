@@ -37,6 +37,10 @@ export const RowDirectionContainer = styled.div`
 
 export const StyledButton = styled.button`
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   cursor: pointer;
 
   ${({$isNegative, $size}) => $isNegative? 
