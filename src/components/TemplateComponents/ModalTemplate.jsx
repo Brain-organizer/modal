@@ -1,33 +1,36 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ViewportCover } from "../../styles/style";
 
-function ModalTemplate({children, coverExist, exitByOuterClick, closeModal}) {
-  const coverRef = useRef();
+function ModalTemplate({children, coverExist, exitByOuterClick, closeModal, isModalOpened, modalOpenerRef}) {
+  const modalRef = useRef();
 
-  if(coverExist){
-    const coverOnClick = (exitByOuterClick?
-      (event) => {
-        if(event.target !==coverRef.current)
-          return;
+  useEffect(() => {
+    const outerOnClick = (event) => {
+      if (!modalRef.current.contains(event.target)&& !modalOpenerRef.current.contains(event.target))
         closeModal();
-      }
-      :
-      () => {;}
-    );
-    
-    return(
-      <ViewportCover ref={coverRef} onClick={coverOnClick}>
-        {children}
-      </ViewportCover>
-    );
-  }
+    };
 
-  else{
-    return (
-    <div>
+    if(exitByOuterClick){
+      document.addEventListener('click', outerOnClick);
+    }
+
+    return () => {
+      if(exitByOuterClick)
+        document.removeEventListener('click', outerOnClick);
+    };
+  }, [isModalOpened, exitByOuterClick, closeModal, modalOpenerRef])
+
+  return (coverExist ?
+    <ViewportCover>
+      <div ref={modalRef}>
+        {children}
+      </div>
+    </ViewportCover>
+    :
+    <div ref={modalRef}>
       {children}
-    </div>);
-  }
+    </div>
+    );
 }
 
 export default ModalTemplate
